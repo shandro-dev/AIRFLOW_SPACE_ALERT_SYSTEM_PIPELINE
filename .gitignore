@@ -1,0 +1,17 @@
+# Ignore environment file
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Airflow logs
+logs/
+
+# Virtual environment
+venv/
+.env/
+
+# Mac / Windows system files
+.DS_Store
+Thumbs.db
