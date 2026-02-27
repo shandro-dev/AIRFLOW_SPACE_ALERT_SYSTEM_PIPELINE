@@ -1,0 +1,106 @@
+WEATHER AND SPACE ALERT SYSTEM
+==============================
+
+Author and Contact
+------------------
+Author: Shandro Mitra  
+Contact Email: shandromitra@gmail.com
+--------------------------------------
+--------------------------------------
+
+Overview
+--------
+This project integrates data from the Open-Meteo API and NASA's Near Earth Object (NEO) API to monitor and generate alerts for weather and space events.
+
+The system performs the following tasks:
+
+Weather Alert System:
+- Fetches weather data from Open-Meteo API
+- Cleans and transforms the data
+- Validates and loads the data into a database
+- Detects extreme weather conditions and sends alert emails
+
+Space Alert System:
+- Fetches asteroid and near-earth object data from NASA NEO API
+- Cleans, transforms, and validates the data
+- Loads data into the database
+- Detects potential asteroid threats and sends alert emails
+
+
+--------------------------------------------------------------------------------------
+
+Requirements
+------------
+- Python 3.10 must be installed
+- All Python dependencies are listed in requirements.txt
+- Airflow
+- Docker
+
+
+
+Environment Configuration (.env)
+--------------------------------
+# Mail Credentials
+GMAIL_APP_PASSWORD=''
+SENDER_MAIL_ID=''
+RECIPIENT_EMAILS=user1@example.com,user2@example.com
+
+# Database Configuration
+db_user=''
+db_password=''
+db_host=''
+db_port=''
+db_name=''
+
+weather_schema_name='weather_alert'
+weather_table_name='weather_hourly_info_initial'
+weather_audit_table='weather_alert_audit_trail'
+
+nasa_schema_name='space_alert'
+nasa_table_name='near_earth_objects_data_initial'
+nasa_audit_table='space_alert_audit_trail'
+
+NASA_NEO_API_KEY=''
+-----------------------------------------------------------
+
+
+# PROJECT SETUP INSTRUCTIONS
+
+1. Install Docker Desktop from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop) and make sure it is running.
+
+2. (Windows Only) Enable WSL:
+
+   * Open “Turn Windows features on or off”
+   * Enable Windows Subsystem for Linux and Virtual Machine Platform
+   * Restart your PC
+
+3. Open Command Prompt as Administrator and run:
+   wsl --install
+   wsl --install -d Ubuntu
+
+4. Clone the repository:
+   git clone <your-repository-url>
+   cd <project-folder-name>
+
+5. Inside the project folder install dependencies:
+   pip install airflow
+   pip install -r requirements.txt
+
+6. Start the services:
+   docker compose up -d
+
+7. Verify containers are running:
+   docker ps
+
+To stop services: docker compose down
+
+
+
+
+
+
+--------------------------------------------------------------------
+
+
+
+
