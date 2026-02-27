@@ -2,11 +2,16 @@ from airflow.sdk import dag,task
 from airflow.operators import *
 from datetime import datetime, timedelta
 
+default_args = {
+    'retries': 2,
+    'retry_delay': timedelta(seconds=90)
+}
 @dag(
     dag_id="space_alert_dag",
     start_date=datetime(2024, 1, 1),
-    schedule="@daily",
+    schedule=None,
     catchup=False, 
+    default_args=default_args,
 )
 
 def space_alert_dag():
