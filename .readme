@@ -10,7 +10,7 @@ Contact Email: shandromitra@gmail.com
 
 Overview
 --------
-This project integrates data from the Open-Meteo API and NASA's Near Earth Object (NEO) API to monitor and generate alerts for weather and space events.
+This project integrates data from the Open-Meteo API and NASA's Near Earth Object (NEO) API to monitor and generate alerts for weather and space events orchestrated the workflow using airflow
 
 The system performs the following tasks:
 
