@@ -40,26 +40,21 @@ Requirements
 
 Environment Configuration (.env)
 --------------------------------
-# Mail Credentials
+
 GMAIL_APP_PASSWORD=''
 SENDER_MAIL_ID=''
 RECIPIENT_EMAILS=user1@example.com,user2@example.com
-
-# Database Configuration
 db_user=''
 db_password=''
 db_host=''
 db_port=''
 db_name=''
-
 weather_schema_name='weather_alert'
 weather_table_name='weather_hourly_info_initial'
 weather_audit_table='weather_alert_audit_trail'
-
 nasa_schema_name='space_alert'
 nasa_table_name='near_earth_objects_data_initial'
 nasa_audit_table='space_alert_audit_trail'
-
 NASA_NEO_API_KEY=''
 -----------------------------------------------------------
 
